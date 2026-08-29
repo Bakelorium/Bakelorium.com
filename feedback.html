@@ -1,0 +1,16 @@
+---
+layout: default
+title: "Feedback"
+hero_title: "Feedback & questions"
+tagline: "Tell us what you think, or ask us anything."
+description: "Send feedback or ask a question about Bakelorium."
+permalink: /feedback/
+---
+
+<section class="hero">
+  <h1>{{ page.hero_title | default: page.title }}</h1>
+  <p class="tagline">{{ page.tagline }}</p>
+  <p class="pill pill-badge coming-soon">Sign-up coming soon</p>
+</section>
+
+{% include feedback_form.liquid %}

@@ -1,0 +1,447 @@
+/* Bakelorium promo site: shared styles. Palette matches
+   pkgs/bkl_core/lib/theme/bakelorium_colors.dart (BakeloriumColors). */
+
+:root {
+  --walnut: #5c3d1e;
+  --caramel: #9b6b35;
+  --honey: #d4956a;
+  --parchment: #f5efe0;
+  --flour: #faf6ee;
+  --aged: #ede4d0;
+  --herb: #4a6741;
+  --sage: #6d8b64;
+  --ember: #d95f2b;
+  --amber: #e8a030;
+  --ash: #7a7570;
+  --espresso: #2c1a0e;
+
+  --bg: var(--flour);
+  --surface: var(--parchment);
+  --surface-alt: var(--aged);
+  --text: var(--espresso);
+  --text-muted: var(--ash);
+  --accent: var(--walnut);
+  --accent-2: var(--herb);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Reusable primitives: shape/behavior atoms, not tied to where they're used. */
+
+.pill {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.3rem 1rem;
+}
+
+.pill-block {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pill-badge {
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  background: var(--surface);
+  border: 1px solid var(--surface-alt);
+}
+
+.pill-button {
+  font: inherit;
+  font-weight: bold;
+  color: var(--walnut);
+  background: var(--accent);
+  text-decoration: none;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+}
+
+.pill-button:hover,
+.pill-button:focus {
+  background: var(--accent-2);
+}
+
+.band-heading {
+  color: var(--accent-2);
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+}
+
+.muted-text {
+  color: var(--text-muted);
+}
+
+.warning-text {
+  color: var(--ember);
+  font-weight: bold;
+}
+
+.tag {
+  display: inline-block;
+  font-family: "Menlo", "Consolas", monospace;
+  font-size: 0.78rem;
+  color: var(--accent);
+  background: var(--surface-alt);
+  border: 1px solid var(--caramel);
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+}
+
+.section-heading {
+  text-align: center;
+  color: var(--accent);
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 1.25rem;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Georgia", "Iowan Old Style", serif;
+  line-height: 1.6;
+}
+
+header.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--surface-alt);
+}
+
+.wordmark {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.site-icon {
+  width: 2.8rem;
+  height: auto;
+  color: var(--honey);
+  /*  Fill for the character's opaque cutout areas (head, hat, uniform).
+      Can't be transparent: those shapes hide overlapping linework drawn
+      underneath them (e.g. the hat brim over the head). Independent from
+      --surface so it can be set without recoloring the whole site. */
+  --icon-fill: var(--parchment);
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+}
+
+nav.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav.site-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+nav.site-nav a:hover,
+nav.site-nav a:focus {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.site-nav p.pronunciation {
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+main {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem 0 3rem;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.hero p.tagline {
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  margin-top: 0;
+}
+
+.hero p.description {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-top: 0;
+}
+
+.coming-soon {
+  margin: 0.5rem 0 1.5rem;
+}
+
+.notify-link {
+  margin-bottom: 0.5rem;
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.pillar {
+  background: var(--surface);
+  border: 1px solid var(--surface-alt);
+  border-top: 3px solid var(--accent-2);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+}
+
+.pillar h3 {
+  margin-top: 0;
+  color: var(--accent-2);
+}
+
+.info-band {
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--surface-alt);
+  border-top: 3px solid var(--accent-2);
+  border-radius: 0.5rem;
+  padding: 2rem 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.info-band + .info-band {
+  margin-top: 1.25rem;
+}
+
+.info-band p {
+  margin: 0;
+}
+
+.info-band .tag-list {
+  justify-content: center;
+  margin-top: 1.1rem;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.85rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.audience-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.audience-links a {
+  display: block;
+  padding: 1rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--caramel);
+  border-radius: 0.5rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.audience-links a:hover,
+.audience-links a:focus {
+  background: var(--surface-alt);
+}
+
+.audience-links span.sub {
+  display: block;
+  font-weight: normal;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+code, .tech-term {
+  font-family: "Menlo", "Consolas", monospace;
+  background: var(--surface-alt);
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--surface-alt);
+}
+
+.disclaimer {
+  background: var(--surface-alt);
+  border-left: 4px solid var(--ember);
+  padding: 1rem 1.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.95rem;
+  margin: 1.5rem 0;
+}
+
+.callout {
+  background: var(--surface);
+  border: 1px solid var(--surface-alt);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.feedback-link {
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.feedback-link a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.feedback-link a:hover,
+.feedback-link a:focus {
+  color: var(--accent-2);
+  text-decoration: underline;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--surface);
+  border: 1px solid var(--surface-alt);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.feedback-form label {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.feedback-form input[type="email"],
+.feedback-form textarea {
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--surface-alt);
+  border-radius: 0.35rem;
+  padding: 0.5rem 0.65rem;
+}
+
+.feedback-form button {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+.notify-panel {
+  text-align: center;
+}
+
+.notify-panel .coming-soon {
+  margin-bottom: 1rem;
+}
+
+.notify-form {
+  max-width: 22rem;
+  margin: 1.5rem auto 0;
+  text-align: left;
+}
+
+.notify-form input:disabled,
+.notify-form button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+footer.site-footer {
+  border-top: 1px solid var(--surface-alt);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+footer.site-footer a {
+  color: var(--text-muted);
+}
+
+.sitemap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 1.25rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sitemap a {
+  text-decoration: none;
+}
+
+.sitemap a:hover,
+.sitemap a:focus {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: var(--espresso);
+    --surface: #3a281a;
+    --surface-alt: #4a3524;
+    --text: var(--flour);
+    --text-muted: #c9b89f;
+    --accent: var(--honey);
+    --accent-2: var(--sage);
+  }
+}

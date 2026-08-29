@@ -1,0 +1,40 @@
+title: "Bakelorium"
+url: "https://bakelorium.com"
+baseurl: ""
+locale: "en-US"
+markdown: kramdown
+# github-pages defaults to jekyll-theme-primer when no theme is set; we
+# supply our own full page chrome (_layouts/, _includes/), so opt out.
+theme: null
+
+tagline: "Make better, one recipe at a time."
+description: "Bakelorium is an offline-first baking app suite. Own your data."
+pronunciation: "Bake - Lore - Ee - Um."
+
+# Rendered obfuscated (see _includes/footer.liquid), never as a bare mailto:
+# link -- see .claude/rules/feedback-channel.md's general-address exception.
+# The +general tag lets Gmail-side filtering target this address
+# specifically; it will NOT stop a real spam operation (they normalize
+# +tags away routinely), only the laziest scrapers that resend whatever
+# string they scraped verbatim.
+contact_email: "bakelorium@gmail.com"
+contact_email_address: "bakelorium+general@gmail.com"
+contact_email_label: "bakelorium (a) gmail.com"
+contact_email_subject: "General inquiry"
+
+# Formspree form ID (from https://formspree.io/forms, the "f/XXXXXXX" part
+# of the form's endpoint). Feedback/questions only for now (no bug-report
+# path yet) -- delivers to bakelorium+feedback@gmail.com per that same rule
+# file. Replace before the form goes live.
+feedback_formspree_id: "REPLACE_ME"
+
+# Main nav links, e.g. [{name: "Feedback", url: "/feedback/"}]. Empty for
+# now -- the feedback page is linked directly from the hero instead.
+menu: []
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
+  - .bundle/

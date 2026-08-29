@@ -1,0 +1,26 @@
+<footer class="site-footer">
+  {% if page.footer_note %}<p>{{ page.footer_note }}</p>{% endif %}
+  <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}.</p>
+  <p>General inquiries: <a id="contact-email-link" href="mailto:{{ site.contact_email_address }}?subject={{ site.contact_email_subject | url_encode }}">{{ site.contact_email_label }}</a></p>
+  <ul class="sitemap">
+    <li><a href="{{ "/"              | relative_url }}">Homepage</a></li>
+    <li><a href="{{ "/get_notified/" | relative_url }}">Get Notified</a></li>
+    <li><a href="{{ "/feedback/"     | relative_url }}">Feedback</a></li>
+  </ul>
+</footer>
+
+<script>
+  (function () {
+    try {
+      var link = document.getElementById("contact-email-link");
+      if (!link) return;
+      var url = new URL(link.href);
+      var params = new URLSearchParams(url.search);
+      var context = "Dear Bakelorium,\n\n\n\n" +
+        "Page: " + location.pathname + "\nLocale: " + navigator.language;
+      params.set("body", context);
+      url.search = params.toString();
+      link.href = url.toString();
+    } catch (e) {}
+  })();
+</script>

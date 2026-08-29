@@ -1,0 +1,10 @@
+<form class="feedback-form" method="POST"
+  action="https://formspree.io/f/{{ site.feedback_formspree_id }}">
+  <label for="feedback-email">Your email</label>
+  <input type="email" id="feedback-email" name="email" required>
+  <label for="feedback-message">Message</label>
+  <textarea id="feedback-message" name="message" rows="6" required></textarea>
+  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+  <input type="hidden" name="_subject" value="Bakelorium feedback">
+  <button type="submit" class="pill pill-button">Send</button>
+</form>
