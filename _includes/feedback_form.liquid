@@ -1,5 +1,5 @@
 <form class="feedback-form" method="POST"
-  action="https://formspree.io/f/{{ site.feedback_formspree_id }}">
+  action="{{ site.feedback_form_action }}">
   <label for="feedback-email">Your email</label>
   <input type="email" id="feedback-email" name="email" required>
   <label for="feedback-message">Message</label>

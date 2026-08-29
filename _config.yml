@@ -17,16 +17,18 @@ pronunciation: "Bake - Lore - Ee - Um."
 # specifically; it will NOT stop a real spam operation (they normalize
 # +tags away routinely), only the laziest scrapers that resend whatever
 # string they scraped verbatim.
-contact_email: "bakelorium@gmail.com"
-contact_email_address: "bakelorium+general@gmail.com"
-contact_email_label: "bakelorium (a) gmail.com"
-contact_email_subject: "General inquiry"
+contact_email         : "bakelorium@gmail.com"
+contact_email_address : "bakelorium+general@gmail.com"
+contact_email_label   : "bakelorium (a) gmail.com"
+contact_email_subject : "General inquiry"
 
 # Formspree form ID (from https://formspree.io/forms, the "f/XXXXXXX" part
 # of the form's endpoint). Feedback/questions only for now (no bug-report
 # path yet) -- delivers to bakelorium+feedback@gmail.com per that same rule
 # file. Replace before the form goes live.
-feedback_formspree_id: "REPLACE_ME"
+feedback_form_action   : "https://formspree.io/f/xeaqjgeq"
+# feedback_form_action : "https://formspree.io/f/xeaqopwr"   # Bakelorium Feedback Prod Form
+# feedback_form_action : "https://formspree.io/f/xeaqjgeq"   # Bakelorium Feedback Test Form
 
 # Main nav links, e.g. [{name: "Feedback", url: "/feedback/"}]. Empty for
 # now -- the feedback page is linked directly from the hero instead.
