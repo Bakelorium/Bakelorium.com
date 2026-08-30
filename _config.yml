@@ -7,7 +7,7 @@ markdown: kramdown
 # supply our own full page chrome (_layouts/, _includes/), so opt out.
 theme: null
 
-tagline: "Make better, one recipe at a time."
+tagline: "Baking Better, One Recipe at a Time."
 description: "Bakelorium is an offline-first baking app suite. Own your data."
 pronunciation: "Bake - Lore - Ee - Um."
 
