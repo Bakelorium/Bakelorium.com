@@ -26,8 +26,7 @@ contact_email_subject : "General inquiry"
 # of the form's endpoint). Feedback/questions only for now (no bug-report
 # path yet) -- delivers to bakelorium+feedback@gmail.com per that same rule
 # file. Replace before the form goes live.
-feedback_form_action   : "https://formspree.io/f/xeaqjgeq"
-# feedback_form_action : "https://formspree.io/f/xeaqopwr"   # Bakelorium Feedback Prod Form
+feedback_form_action : "https://formspree.io/f/xeaqopwr"   # Bakelorium Feedback Prod Form
 # feedback_form_action : "https://formspree.io/f/xeaqjgeq"   # Bakelorium Feedback Test Form
 
 # Main nav links, e.g. [{name: "Feedback", url: "/feedback/"}]. Empty for
