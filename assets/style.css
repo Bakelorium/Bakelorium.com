@@ -172,7 +172,7 @@ nav.site-nav a:focus {
   text-decoration: underline;
 }
 
-.site-nav p.pronunciation {
+p.pronunciation {
   color: var(--accent);
   font-size: 0.8rem;
 }
@@ -194,13 +194,13 @@ main {
   color: var(--accent);
 }
 
-.hero p.tagline {
+p.tagline {
   font-size: 1.4rem;
   color: var(--text-muted);
   margin-top: 0;
 }
 
-.hero p.description {
+p.description {
   font-size: 1.2rem;
   color: var(--text-muted);
   margin-top: 0;
