@@ -1,0 +1,42 @@
+
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<meta name="author" content="{{ site.founder_name }}" />
+<meta name="title" content="{{ site.title }}" />
+<meta name="description" content="{{ site.description }}" />
+<meta name="keywords" content="{{ site.keywords }}" />
+
+{% comment %} -- Twitter -- {% endcomment %}
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ site.title }}" />
+<meta name="twitter:description" content="{{ site.description }}" />
+{% comment %}
+<meta name="twitter:site" content="@Bakelorium" />
+<meta name="twitter:creator" content="@Bakelorium" />
+{% endcomment %}
+
+{% comment %}
+<meta name="twitter:image" content="{{ "/assets/favicon.png" | relative_url }}" />
+{% endcomment %}
+
+{% comment %} -- Open Graph general (Facebook, Pinterest) -- {% endcomment %}
+
+<meta property="og:title" content="{{ site.title }}" />
+<meta property="og:description" content="{{ site.description }}" />
+<meta property="og:url" content="{{ page.url | absolute_url }}" />
+<meta property="og:site_name" content="{{ site.tagline }}" />
+{% comment %}
+<meta property="og:image" content="{{ "/assets/favicon.png" | relative_url }}" />
+<meta property="og:image:secure" content="{{ "/assets/favicon.png" | relative_url }}" />
+{% endcomment %}
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+
+{% comment %} -- Emoji SVG favicon -- {% endcomment %}
+
+{% comment %}
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍎</text></svg>" />
+{% endcomment %}

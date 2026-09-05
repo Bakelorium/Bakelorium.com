@@ -1,12 +1,8 @@
 <footer class="site-footer">
   {% if page.footer_note %}<p>{{ page.footer_note }}</p>{% endif %}
   <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}.</p>
-  <p>General inquiries: <a id="contact-email-link" href="mailto:{{ site.contact_email_address }}?subject={{ site.contact_email_subject | url_encode }}">{{ site.contact_email_label }}</a></p>
-  <ul class="sitemap">
-    <li><a href="{{ "/"              | relative_url }}">Homepage</a></li>
-    {% comment %} <li><a href="{{ "/get_notified/" | relative_url }}">Get Notified</a></li> {% endcomment %}
-    <li><a href="{{ "/feedback/"     | relative_url }}">Feedback</a></li>
-  </ul>
+  <p>General inquiries: <a id="contact-email-link" href="mailto:{{ site.contact_email_address }}?subject={{ site.contact_email_subject | url_encode }}">{{ site.contact_email_address }}</a></p>
+  {% include footer_sitemap.liquid %}
 </footer>
 
 <script>

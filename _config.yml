@@ -7,19 +7,21 @@ markdown: kramdown
 # supply our own full page chrome (_layouts/, _includes/), so opt out.
 theme: null
 
+# jekyll-sitemap is bundled by the github-pages gem but still needs
+# listing here to activate -- generates sitemap.xml at build time from
+# whatever pages actually exist, so it can't drift from the real site the
+# way a hand-written one would.
+plugins:
+  - jekyll-sitemap
+
 tagline: "Baking Better, One Recipe at a Time."
 description: "Bakelorium is an offline-first baking app suite. Own your data."
 pronunciation: "Bake - Lore - Ee - Um."
+keywords: "food, baking, cooking"
+founder_name: "Nathaniel Perry"
 
-# Rendered obfuscated (see _includes/footer.liquid), never as a bare mailto:
-# link -- see .claude/rules/feedback-channel.md's general-address exception.
-# The +general tag lets Gmail-side filtering target this address
-# specifically; it will NOT stop a real spam operation (they normalize
-# +tags away routinely), only the laziest scrapers that resend whatever
-# string they scraped verbatim.
-contact_email         : "bakelorium@gmail.com"
-contact_email_address : "bakelorium+general@gmail.com"
-contact_email_label   : "bakelorium (a) gmail.com"
+contact_email         : "contact@bakelorium.com"
+contact_email_address : "contact@bakelorium.com"
 contact_email_subject : "General inquiry"
 
 # Formspree form ID (from https://formspree.io/forms, the "f/XXXXXXX" part

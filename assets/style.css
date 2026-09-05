@@ -30,6 +30,15 @@
 
 /* Reusable primitives: shape/behavior atoms, not tied to where they're used. */
 
+.bolded {
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.smaller {
+  font-size: 0.8rem;
+}
+
 .pill {
   display: inline-block;
   border-radius: 999px;
@@ -83,17 +92,6 @@
   font-weight: bold;
 }
 
-.tag {
-  display: inline-block;
-  font-family: "Menlo", "Consolas", monospace;
-  font-size: 0.78rem;
-  color: var(--accent);
-  background: var(--surface-alt);
-  border: 1px solid var(--caramel);
-  border-radius: 999px;
-  padding: 0.2rem 0.65rem;
-}
-
 .section-heading {
   text-align: center;
   color: var(--accent);
@@ -101,6 +99,15 @@
   font-weight: bold;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  margin: 0 0 1.25rem;
+}
+
+.section-body {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 0.06em;
   margin: 0 0 1.25rem;
 }
 
@@ -172,7 +179,9 @@ nav.site-nav a:focus {
   text-decoration: underline;
 }
 
-p.pronunciation {
+p.subtitle-line {
+  margin-top: 3px;
+  margin-bottom: 12px;
   color: var(--accent);
   font-size: 0.8rem;
 }
@@ -234,6 +243,13 @@ p.description {
   color: var(--accent-2);
 }
 
+.pillar .heading {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0 0 1.25rem;
+}
+
 .info-band {
   text-align: center;
   background: var(--surface);
@@ -253,7 +269,6 @@ p.description {
 }
 
 .info-band .tag-list {
-  justify-content: center;
   margin-top: 1.1rem;
 }
 
@@ -264,6 +279,21 @@ p.description {
   margin: 0.85rem 0 0;
   padding: 0;
   list-style: none;
+}
+
+.tag-list.center {
+  justify-content: center;
+}
+
+.tag {
+  display: inline-block;
+  font-family: "Menlo", "Consolas", monospace;
+  font-size: 0.78rem;
+  color: var(--accent);
+  background: var(--surface-alt);
+  border: 1px solid var(--caramel);
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
 }
 
 .audience-links {
@@ -334,6 +364,27 @@ th, td {
   margin: 1.5rem 0;
 }
 
+.about-story {
+  max-width: 34rem;
+  margin: 2.5rem auto 0;
+}
+
+.about-story p {
+  margin: 0 0 1.25rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.about-story .smaller {
+  font-size: 0.8rem;
+}
+
+.about-story .tag-list {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--surface-alt);
+}
+
 .maker-profile {
   display: flex;
   align-items: center;
@@ -366,7 +417,7 @@ th, td {
   list-style: none;
 }
 
-.link-row-center {
+.link-row.center {
   justify-content: center;
   margin-top: 1.1rem;
 }
@@ -384,13 +435,25 @@ th, td {
   color: var(--accent-2);
 }
 
+.text-link {
+  color: var(--accent);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.text-link:hover,
+.text-link:focus {
+  color: var(--accent-2);
+  text-decoration: underline;
+}
+
 @media (max-width: 32rem) {
   .maker-profile {
     flex-direction: column;
     text-align: center;
   }
 
-  .link-row {
+  .link-row.center {
     justify-content: center;
   }
 }

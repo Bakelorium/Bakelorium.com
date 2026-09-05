@@ -1,0 +1,142 @@
+
+{% comment %} spell:words autolyse {% endcomment %}
+
+<section class="hero" id="top-header-block">
+  <h1>{{ site.title }}</h1>
+  <p class="subtitle-line narrow-top-margin">{{ site.pronunciation }}</p>
+  {% include icon.liquid %}
+  <p class="tagline">{{ site.tagline }}</p>
+  <p class="description">
+    Offline-first baking, shopping lists, and pantry inventory app with allergen-aware substitutions.
+    Built by an engineer who deals with allergies personally every day.
+  </p>
+  <p class="pill pill-badge coming-soon">Coming soon</p>
+  {% comment %}
+  <a class="pill pill-button pill-block notify-link" href="{{ "/get_notified/" | relative_url }}">Get notified when we launch</a>
+  {% endcomment %}
+</section>
+
+<h2 class="section-heading">What is Bakelorium</h2>
+
+<div class="pillars" id="what-is-bakelorium">
+
+  <article class="pillar">
+    <h3 class="heading">Recipes</h3>
+    <p>Share any way you want.</p>
+    <p>Your recipes, your way.</p>
+    <p>It's not just for baking!</p>
+  </article>
+
+  <article class="pillar">
+    <h3 class="heading">Pantry</h3>
+    <p>Inventory tracking at home.</p>
+    <p>Barcode scanning.</p>
+  </article>
+
+  <article class="pillar">
+    <h3 class="heading">Shopping lists</h3>
+    <p>For when you stop at the store.</p>
+    <p>Add to shopping list from Recipes.</p>
+    <p>Show inventory numbers from pantry.</p>
+  </article>
+
+</div>
+
+<p class="section-body">And more. We can't just give away all our secrets.</p>
+
+{% include platforms.liquid %}
+
+<h2 class="section-heading">In your kitchen</h2>
+
+<div class="pillars">
+
+  <article class="pillar">
+    <h3>Dietary Restrictions</h3>
+    <p>Allergies.</p>
+    <p>Preferences.</p>
+    <p>Ingredient substitutions in recipe.</p>
+    <p>Known allergens in recipe ingredients are shown.</p>
+    <p>Each recipe lists which common allergens appear in its ingredients and where a known swap exists.</p>
+  </article>
+
+  <article class="pillar">
+    <h3>Recipes that scale with you</h3>
+    <p>Change the servings and watch weights recalculate.</p>
+    <p>Baker's percentages for your cooks.</p>
+    <p>Metric or Imperial.</p>
+  </article>
+
+  <article class="pillar">
+    <h3>Baking science, built in</h3>
+    <p>Inline glossary for terms like autolyse or lamination.</p>
+    <p>Learn the why, not just the steps.</p>
+    <p>Step-level notes explain what gluten, leavening, and temperature are actually doing.</p>
+  </article>
+
+</div>
+
+<h2 class="section-heading">On your terms</h2>
+
+<div class="pillars">
+
+  <article class="pillar">
+    <h3>Works without our cloud servers</h3>
+    <p>No account. No email. No signup. No login. Open the app and start making.</p>
+    <p>Designed to work without an internet connection, in the kitchen or on the go.</p>
+    <p>The app doesn't need our servers to work.</p>
+  </article>
+
+  <article class="pillar">
+    <h3>Share recipes and sync lists phone-to-phone</h3>
+    <p>QR code scan-to-import between two phones, no account or cloud round-trip.</p>
+    <p>Recipes can be shared like any file.</p>
+    <p>Our cloud server API is a convenience, not a requirement.</p>
+  </article>
+
+  <article class="pillar">
+    <h3>No vendor lock-in</h3>
+
+    <p>No AI features inside the app to pull your focus while you cook.</p>
+
+    <p>No account, no signup required.</p>
+    <p>No email, no login, nothing to remember.</p>
+    <p>No subscriptions.</p>
+    <p>No paid tiers.</p>
+    <p>No features that expire.</p>
+
+  </article>
+
+</div>
+
+<h2 class="section-body">Open the app and start baking.</h2>
+
+<section class="info-band" id="you-own-your-data">
+  <h2 class="band-heading">You own your data</h2>
+  <p class="muted-text">Your recipes export as plain text files you can read without this app.</p>
+  <ul class="tag-list center">
+    <li class="tag">BakeBundle</li>
+    <li class="tag">Markdown</li>
+    <li class="tag">JSON-LD schema.org/Recipe</li>
+    <li class="tag">Cooklang</li>
+    <li class="tag">PDF</li>
+    <li class="tag">Print</li>
+  </ul>
+</section>
+
+{% include authors.liquid  %}
+
+<section class="info-band" id="about-the-app">
+  <h2 class="band-heading">More about the app</h2>
+  <p class="muted-text">Follow along, see the code, or say hello.</p>
+  <ul class="link-row center">
+    <li><a class="pill pill-link" href="https://github.com/Bakelorium">Bakelorium on GitHub</a></li>
+    {% comment %}
+    <li><a class="pill pill-link" href="https://discord.gg/QxKygP3C5U">Join the Discord</a></li>
+    {% endcomment %}
+    <li><a class="pill pill-link"  href="{{ "/about/" | relative_url }}">More about Bakelorium</a></li>
+  </ul>
+</section>
+
+{% comment %}
+<p class="feedback-link"><a href="{{ "/feedback/" | relative_url }}">Have feedback or a question? Get in touch.</a></p>
+{% endcomment %}
