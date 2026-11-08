@@ -12,7 +12,9 @@
   </p>
   <p class="pill pill-badge coming-soon">Coming soon</p>
   {% comment %}
-  <a class="pill pill-button pill-block notify-link" href="{{ "/get_notified/" | relative_url }}">Get notified when we launch</a>
+  <a class="pill pill-button pill-block notify-link" href="{{ "/get_notified/" | relative_url }}">
+    Get notified when we launch
+  </a>
   {% endcomment %}
 </section>
 
@@ -56,7 +58,7 @@
     <p>Preferences.</p>
     <p>Ingredient substitutions in recipe.</p>
     <p>Known allergens in recipe ingredients are shown.</p>
-    <p>Each recipe lists which common allergens appear in its ingredients and where a known swap exists.</p>
+    <p>Each recipe flags the common allergens we know of in its ingredients, and where a known swap exists.</p>
   </article>
 
   <article class="pillar">
@@ -75,14 +77,19 @@
 
 </div>
 
+{% comment %}
+<p class="section-body">Coming soon: look up ingredient substitutions on the web, no app needed.</p>
+{% endcomment %}
+
 <h2 class="section-heading">On your terms</h2>
 
 <div class="pillars">
 
   <article class="pillar">
     <h3>Works without our cloud servers</h3>
-    <p>No account. No email. No signup. No login. Open the app and start making.</p>
-    <p>Designed to work without an internet connection, in the kitchen or on the go.</p>
+    <p>No account, no signup, no email. Open the app and start.</p>
+    <p>No internet required for your recipes, lists, and pantry.</p>
+    <p>Online lookups, like product info for a scanned barcode, happen only when you ask or turn them on.</p>
     <p>The app doesn't need our servers to work.</p>
   </article>
 
@@ -90,7 +97,7 @@
     <h3>Share recipes and sync lists phone-to-phone</h3>
     <p>QR code scan-to-import between two phones, no account or cloud round-trip.</p>
     <p>Recipes can be shared like any file.</p>
-    <p>Our cloud server API is a convenience, not a requirement.</p>
+    <p>Optional cloud features may come later. They will stay optional.</p>
   </article>
 
   <article class="pillar">
@@ -100,9 +107,10 @@
 
     <p>No account, no signup required.</p>
     <p>No email, no login, nothing to remember.</p>
-    <p>No subscriptions.</p>
-    <p>No paid tiers.</p>
+    <p>Buy it once. The app and its recipes are yours, and they keep working whether or not you ever pay us again.</p>
+    <p>Never a cost to just use the app.</p>
     <p>No features that expire.</p>
+    <p>No ads, ever.</p>
 
   </article>
 
@@ -110,33 +118,8 @@
 
 <h2 class="section-body">Open the app and start baking.</h2>
 
-<section class="info-band" id="you-own-your-data">
-  <h2 class="band-heading">You own your data</h2>
-  <p class="muted-text">Your recipes export as plain text files you can read without this app.</p>
-  <ul class="tag-list center">
-    <li class="tag">BakeBundle</li>
-    <li class="tag">Markdown</li>
-    <li class="tag">JSON-LD schema.org/Recipe</li>
-    <li class="tag">Cooklang</li>
-    <li class="tag">PDF</li>
-    <li class="tag">Print</li>
-  </ul>
-</section>
+{% include export_fomats.liquid %}
 
 {% include authors.liquid  %}
 
-<section class="info-band" id="about-the-app">
-  <h2 class="band-heading">More about the app</h2>
-  <p class="muted-text">Follow along, see the code, or say hello.</p>
-  <ul class="link-row center">
-    <li><a class="pill pill-link" href="https://github.com/Bakelorium">Bakelorium on GitHub</a></li>
-    {% comment %}
-    <li><a class="pill pill-link" href="https://discord.gg/QxKygP3C5U">Join the Discord</a></li>
-    {% endcomment %}
-    <li><a class="pill pill-link"  href="{{ "/about/" | relative_url }}">More about Bakelorium</a></li>
-  </ul>
-</section>
-
-{% comment %}
-<p class="feedback-link"><a href="{{ "/feedback/" | relative_url }}">Have feedback or a question? Get in touch.</a></p>
-{% endcomment %}
+{% include more_about_links.liquid  %}

@@ -15,7 +15,7 @@ plugins:
   - jekyll-sitemap
 
 tagline: "Baking Better, One Recipe at a Time."
-description: "Bakelorium is an offline-first baking app suite. Own your data."
+description: "Bakelorium is an offline-first app for recipes, shopping lists, and pantry. Own your data."
 pronunciation: "Bake - Lore - Ee - Um."
 keywords: "food, baking, cooking"
 founder_name: "Nathaniel Perry"

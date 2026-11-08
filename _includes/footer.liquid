@@ -2,6 +2,9 @@
   {% if page.footer_note %}<p>{{ page.footer_note }}</p>{% endif %}
   <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}.</p>
   <p>General inquiries: <a id="contact-email-link" href="mailto:{{ site.contact_email_address }}?subject={{ site.contact_email_subject | url_encode }}">{{ site.contact_email_address }}</a></p>
+  {% comment %}
+  <p class="feedback-link"><a href="{{ "/feedback/" | relative_url }}">Have feedback or a question? Get in touch.</a></p>
+  {% endcomment %}
   {% include footer_sitemap.liquid %}
 </footer>
 
